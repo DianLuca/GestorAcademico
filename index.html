@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade de Gestão Escolar - EDUC</title>
 </head>
 <body>
+    <header>
+        <h1>Sistema EDUC*</h1>
+    </header>
     
+    <section id="cadastro">
+
+        <form action="">
+            <label for="name">Digite seu nome completo:</label>
+            <input type="text" name="name" id="nome">
+            <label for="idade">Digite sua idade:</label>
+            <input type="text" name="idade" id="idade">
+            <label for="frequencia">Insira sua frequência anual(%):</label>
+            <input type="text" name="frequencia" id="frequencia_ano">
+            <label for="notas">Insira suas notas (separadas por ',')</label>
+            <input type="text" name="notas" id="notas_geral">
+            <button type="submit">Cadastrar</button>
+        </form>
+
+    </section>
+
+    <main>
+        <section>
+            <h1>Lista de Alunos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome Completo</th>
+                        <th>Idade</th>
+                        <th>Frequência(%)</th>
+                        <th>Notas</th>
+                        <th>Status</th>
+                        <th>Açoes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Victor</td>
+                        <td>15</td>
+                        <td>80</td>
+                        <td>9</td>
+                        <td>Aprovado</td>
+                        <td><button type="button">Reset</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>EXERCÍCIO DE SISTEMA EDUCACIONAL</p>
+    </footer>
+
 </body>
 </html>
