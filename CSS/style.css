@@ -3,3 +3,95 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* O nome das variáveis será corrigida */
+:root {
+    --texto: #C5D0D9;
+    --texto1: #4F6273;
+    --texto2: #3868A6;
+    --texto3: #F28729;
+    --texto4: #0D0D0D;
+}
+
+header, footer {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: var(--texto);
+    color: var(--texto4);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Formulário */
+
+#cadastro {
+    height: 600px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.campo {
+    display: flex;
+    flex: 1;
+}
+
+/* Estilo da tabela */
+
+table {
+    border: 1px solid #0D0D0D;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {   
+    background-color: #3868A6;
+    border: 1px solid #0D0D0D;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid #0D0D0D;
+    padding: 5px;
+}
+
+tr {
+    background-color: #C5D0D9;
+}
+
+tr:nth-child(even) {
+    background-color: #c5d0d981;
+}
+
+button {
+    height: 30px;
+    width: min(450px, 100%);
+}
