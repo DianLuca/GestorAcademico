@@ -50,12 +50,19 @@ form {
     width: 100%;
     flex-direction: column;
     gap: 20px;
+    padding: 10px;
     font-size: 1.2em;
+    border: 1px solid var(--texto4);
+    border-radius: 2px;
 }
 
+label {
+    flex: 1;
+}
 input{
-    width: 100%;
+    flex: 4;
     padding: 5px;
+    /* margin-left: 5px; */
     font-size: 1em;
 }
 
@@ -92,6 +99,8 @@ tr:nth-child(even) {
 }
 
 button {
+    margin: auto;
     height: 30px;
     width: min(450px, 100%);
 }
+

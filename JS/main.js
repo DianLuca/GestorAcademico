@@ -5,7 +5,7 @@
 // - verificar se tem outra forma de fazer os alertas sem ser pelo alert('')
  
 document.addEventListener("DOMContentLoaded", () => {
-  const AdicionarAluno = document.getElementById("btncadastrar");
+  const AdicionarAluno = document.getElementById("btnCadastrar");
   const Tabela = document.getElementById("TabelaAluno").querySelector("tbody");
 
 
