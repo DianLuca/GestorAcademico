@@ -28,3 +28,10 @@ export function limparFormulario() {
 export function exibirMensagem(mensagem) {
  alert(mensagem); 
 }
+
+// Para ocultar ou não o cadastro
+export function mostrarCadastro() {
+  const cadastro = document.querySelector('form');
+    
+  cadastro.classList.toggle('ocultar');
+}
