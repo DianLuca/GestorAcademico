@@ -1,5 +1,5 @@
 import { calcularMedia, alunoJaCadastrado } from './aluno_notas.js';
-import { adicionarAlunoNaTabela, limparFormulario, exibirMensagem } from '../utils/utils.js';
+import { adicionarAluno, limparFormulario, exibirMensagem } from '../utils/utils.js';
 
 export function CadastroAluno() {
   const nome = document.getElementById("nome").value.trim();
@@ -11,14 +11,14 @@ export function CadastroAluno() {
   const nomeComposto = nome.split(" ").filter(p => p).length >= 2;
 
   if (!nomeComposto || !idade || isNaN(frequencia) || notas.length !== 4 || notas.some(isNaN)) {
-    // sem alert exibirMensagem("Preencha todos os campos corretamente:\n- Nome composto\n- Idade\n- 4 notas numéricas\n- Frequência numérica");
+    exibirMensagem("Preencha todos os campos corretamente:\n- Nome composto\n- Idade\n- 4 notas numéricas\n- Frequência numérica");
     return;
   }
 
-//if (alunoJaCadastrado(nome)) { fazer validação
-//    exibirMensagem("Aluno já cadastrado.");
-//    return;
-//  }
+    if (alunoJaCadastrado(nome)) {
+   exibirMensagem("Aluno já cadastrado.");
+    return;
+    }
 
   const media = calcularMedia(notas);
   let status = "";
@@ -31,6 +31,6 @@ export function CadastroAluno() {
     status = "Aprovado";
   }
 
-  adicionarAlunoNaTabela({ nome, idade, frequencia, notas, status });
+  adicionarAluno({ nome, idade, frequencia, notas, status });
   limparFormulario();
 }

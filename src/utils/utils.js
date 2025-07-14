@@ -25,6 +25,6 @@ export function limparFormulario() {
   document.getElementById("notas_geral").value = "";
 }
 
-//export function exibirMensagem(mensagem) { tentar outra forma sem alert
-//  alert(mensagem); 
-//}
+export function exibirMensagem(mensagem) {
+ alert(mensagem); 
+}
