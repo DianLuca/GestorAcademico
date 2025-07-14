@@ -61,5 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("frequencia_ano").value = "";
     document.getElementById("notas_geral").value = "";
   });
-});
 
+
+
+  // Para ocultar ou não o cadastro
+  const mostrarCadastro = document.querySelector('#mostrarCadastro');
+
+  mostrarCadastro.addEventListener('click', () => {
+    const cadastro = document.querySelector('form');
+    
+    cadastro.classList.toggle('ocultar');
+    
+  })
+
+});
