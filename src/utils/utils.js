@@ -1,0 +1,30 @@
+export function adicionarAluno({ nome, idade, frequencia, notas, status }) {
+  const tabela = document.querySelector("#TabelaAluno tbody");
+  const novaLinha = document.createElement("tr");
+
+  novaLinha.innerHTML = `
+    <td>${nome}</td>
+    <td>${idade}</td>
+    <td>${frequencia}%</td>
+    <td>${notas.join(", ")}</td>
+    <td>${status}</td>
+    <td><button class="remover-btn">Remover</button></td>
+  `;
+
+  novaLinha.querySelector(".remover-btn").addEventListener("click", () => {
+    novaLinha.remove();
+  });
+
+  tabela.appendChild(novaLinha);
+}
+
+export function limparFormulario() {
+  document.getElementById("nome").value = "";
+  document.getElementById("idade").value = "";
+  document.getElementById("frequencia_ano").value = "";
+  document.getElementById("notas_geral").value = "";
+}
+
+//export function exibirMensagem(mensagem) { tentar outra forma sem alert
+//  alert(mensagem); 
+//}
