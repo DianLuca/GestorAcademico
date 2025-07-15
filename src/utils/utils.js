@@ -21,25 +21,43 @@ export function adicionarAluno({ nome, idade, frequencia, notas, status }) {
 export function limparFormulario() {
   document.getElementById("nome").value = "";
   document.getElementById("idade").value = "";
-  document.getElementById("frequencia_ano").value = "";
-  document.getElementById("notas_geral").value = "";
+  document.getElementById("frequencia").value = "";
+  document.getElementById("notas").value = "";
+
+  ['nome', 'idade', 'frequencia', 'notas'].forEach(id => {
+    document.getElementById(`${id}Erro`).textContent = "";
+  });
 }
 
-export function exibirMensagem(mensagem) {
- alert(mensagem); 
+export function exibirMensagem(local) {
+  
+  const erro = document.getElementById(`${local}Erro`);
+  const mensagemErro = document.getElementById('Erro');
+  const span = document.getElementsByTagName('span');
+  
+  erro.style.borderColor = '#FF0000';
+  span.textContent = '';
+  erro.innerHTML = '&Otimes;';
+  mensagemErro.innerHTML = `&Otimes; O campo não foi preenchido corretamente.`;
+  
+  return false;
 }
 
-// Para ocultar ou não o cadastro
 export function mostrarCadastro() {
   const cadastro = document.querySelector('form');
-    
   cadastro.classList.toggle('ocultar');
 }
 
+// mantenha somente essa, pois estava danod erro com função duplicada
 export function limparTabela(){
   if(confirm("Deseja excluir os registros de todos os alunos?")){
     const tabela = document.querySelector("#TabelaAluno tbody");
     tabela.innerHTML = "";
     exibirMensagem("Os registros foram exluidos");
-  }
+  };
+}
+
+export function alternarTema(botao) {
+    document.body.classList.toggle('tema-escuro');
+    botao.textContent = document.body.classList.contains('tema-escuro') ? ' Tema Claro' : ' Tema Escuro';
 }
