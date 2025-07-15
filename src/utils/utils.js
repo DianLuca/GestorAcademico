@@ -21,12 +21,23 @@ export function adicionarAluno({ nome, idade, frequencia, notas, status }) {
 export function limparFormulario() {
   document.getElementById("nome").value = "";
   document.getElementById("idade").value = "";
-  document.getElementById("frequencia_ano").value = "";
-  document.getElementById("notas_geral").value = "";
+  document.getElementById("frequencia").value = "";
+  document.getElementById("notas").value = "";
 }
 
-export function exibirMensagem(mensagem) {
- alert(mensagem); 
+export function exibirMensagem(local) {
+  const erro = document.getElementById(`${local}Erro`);
+  // erro.style.color = '#FF0000';
+
+
+  if (local === 'frequencia') {
+    local = 'frequência';
+    erro.textContent = `O campo ${local} não foi preenchido corretamente.`;
+  } else {
+    erro.textContent = `O campo ${local} não foi preenchido corretamente.`;
+  }
+
+  return false;
 }
 
 // Para ocultar ou não o cadastro
