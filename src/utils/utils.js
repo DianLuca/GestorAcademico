@@ -35,3 +35,11 @@ export function mostrarCadastro() {
     
   cadastro.classList.toggle('ocultar');
 }
+
+export function limparTabela(){
+  if(confirm("Deseja excluir os registros de todos os alunos?")){
+    const tabela = document.querySelector("#TabelaAluno tbody");
+    tabela.innerHTML = "";
+    exibirMensagem("Os registros foram exluidos");
+  }
+}
