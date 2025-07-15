@@ -121,3 +121,8 @@ footer{
     width: 100%;
     position: static;
 }
+
+span {
+    text-align: center;
+    color: #FF0000;
+}

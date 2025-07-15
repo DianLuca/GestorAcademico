@@ -27,15 +27,12 @@ export function limparFormulario() {
 
 export function exibirMensagem(local) {
   const erro = document.getElementById(`${local}Erro`);
+  const mensagemErro = document.getElementById('Erro');
+
   // erro.style.color = '#FF0000';
-
-
-  if (local === 'frequencia') {
-    local = 'frequência';
-    erro.textContent = `O campo ${local} não foi preenchido corretamente.`;
-  } else {
-    erro.textContent = `O campo ${local} não foi preenchido corretamente.`;
-  }
+  erro.innerHTML = '&Otimes;';
+  mensagemErro.innerHTML = `&Otimes; O campo não foi preenchido corretamente.`;
+  
 
   return false;
 }
