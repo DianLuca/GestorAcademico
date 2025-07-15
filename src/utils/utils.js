@@ -30,15 +30,16 @@ export function limparFormulario() {
 }
 
 export function exibirMensagem(local) {
+  
   const erro = document.getElementById(`${local}Erro`);
   const mensagemErro = document.getElementById('Erro');
-
-  // erro.style.color = '#FF0000';
+  const span = document.getElementsByTagName('span');
+  
+  erro.style.borderColor = '#FF0000';
+  span.textContent = '';
   erro.innerHTML = '&Otimes;';
   mensagemErro.innerHTML = `&Otimes; O campo não foi preenchido corretamente.`;
   
-
-  erro.textContent = `O campo ${campo} não foi preenchido corretamente.`;
   return false;
 }
 

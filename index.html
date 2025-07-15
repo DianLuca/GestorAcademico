@@ -22,22 +22,22 @@
             <form action="">
                 <div class="campo">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" id="nome" />
+                    <input type="text" name="nome" id="nome" placeholder="Ex.: João Silva"/>
                     <span id="nomeErro"></span>
                 </div>
                 <div class="campo">
                     <label for="idade">Idade:</label>
-                    <input type="text" name="idade" id="idade" />
+                    <input type="number" name="idade" id="idade" min="0" placeholder="Ex.: 10"/>
                     <span id="idadeErro"></span>
                 </div>
                 <div class="campo">
                     <label for="frequencia">Insira sua frequência anual(%):</label>
-                    <input type="text" name="frequencia" id="frequencia" />
+                    <input type="number" name="frequencia" id="frequencia" min="0" max="100" placeholder="Ex.: 70"/>
                     <span id="frequenciaErro"></span>
                 </div>
                 <div class="campo">
                     <label for="notas">Insira suas notas (separadas por ','):</label>
-                    <input type="text" name="notas" id="notas" />
+                    <input type="text" name="notas" id="notas" placeholder="Ex.:10,10,10,10"/>
                     <span id="notasErro"></span>
                 </div>
                 <button type="button" id="btnCadastrar">Cadastrar</button>

@@ -32,7 +32,9 @@ export function CadastroAluno() {
     erro = true;
   }
 
-  if (erro) return;
+  const mensagemErro = document.getElementById('Erro');
+
+  if (erro) {return} else {mensagemErro.innerHTML = ''};
 
   const media = calcularMedia(notas);
   let status = "";
