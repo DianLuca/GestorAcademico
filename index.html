@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Atividade de Gestão Escolar - EDUC</title>
-    </head>
-    <body>
-        <header>
-            <h1 class="container">Sistema EDUC*</h1>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Atividade de Gestão Escolar - EDUC</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="container">Sistema EDUC*</h1>
+    </header>
 
-        <section id="cadastro" class="container">
-           <article>
-    <h2>CADASTRO</h2>
-    <div class="botoes-topo">
-        <button id="mostrarCadastro">Mostrar/Ocultar</button>
-        <button id="botaoTema"></button>
-    </div>
-</article>
-            <form action="">
-                <div class="campo">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Ex.: João Silva"/>
-                    <span id="nomeErro"></span>
-                </div>
-                <div class="campo">
-                    <label for="idade">Idade:</label>
-                    <input type="number" name="idade" id="idade" min="0" placeholder="Ex.: 10"/>
-                    <span id="idadeErro"></span>
-                </div>
-                <div class="campo">
-                    <label for="frequencia">Insira sua frequência anual(%):</label>
-                    <input type="number" name="frequencia" id="frequencia" min="0" max="100" placeholder="Ex.: 70"/>
-                    <span id="frequenciaErro"></span>
-                </div>
-                <div class="campo">
-                    <label for="notas">Insira suas notas (separadas por ','):</label>
-                    <input type="text" name="notas" id="notas" placeholder="Ex.:10,10,10,10"/>
-                    <span id="notasErro"></span>
-                </div>
-                <button type="button" id="btnCadastrar">Cadastrar</button>
-                <span id="Erro"></span>
-            </form>
-        </section>
+    <section id="cadastro" class="container">
+      <article>
+        <h2>CADASTRO</h2>
+        <div class="botoes-topo">
+          <button id="mostrarCadastro">Mostrar/Ocultar</button>
+          <button id="botaoTema">Trocar Tema</button>
+        </div>
+      </article>
+      <form action="">
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" name="nome" id="nome" placeholder="Ex.: João Silva"/>
+          <span id="nomeErro"></span>
+        </div>
+        <div class="campo">
+          <label for="idade">Idade:</label>
+          <input type="number" name="idade" id="idade" min="0" placeholder="Ex.: 10"/>
+          <span id="idadeErro"></span>
+        </div>
+        <div class="campo">
+          <label for="frequencia">Insira sua frequência anual(%):</label>
+          <input type="number" name="frequencia" id="frequencia" min="0" max="100" placeholder="Ex.: 70"/>
+          <span id="frequenciaErro"></span>
+        </div>
+        <div class="campo">
+          <label for="notas">Insira suas notas (separadas por ','):</label>
+          <input type="text" name="notas" id="notas" placeholder="Ex.:10,10,10,10"/>
+          <span id="notasErro"></span>
+        </div>
+        <button type="button" id="btnCadastrar">Cadastrar</button>
+        <span id="Erro"></span>
+      </form>
+    </section>
 
-        <main class="container">
-            <section>
-                <article>
-                    <h2>Lista de Alunos</h2>
-                    <button id="btnLimparTabela">Excluir todos os registros</button>
-                </article>
-                <table id="TabelaAluno">
-                    <thead>
-                        <tr>
-                            <th>Nome Completo</th>
-                            <th>Idade</th>
-                            <th>Frequência(%)</th>
-                            <th>Notas</th>
-                            <th>Status</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </section>
-        </main>
+    <main class="container">
+      <section>
+        <article>
+          <h2>Lista de Alunos</h2>
+          <button id="btnLimparTabela">Excluir todos os registros</button>
+        </article>
+        <table id="TabelaAluno">
+          <thead>
+            <tr>
+              <th>Nome Completo</th>
+              <th>Idade</th>
+              <th>Frequência(%)</th>
+              <th>Notas</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
 
-        <footer>
-            <p class="container">EXERCÍCIO DE SISTEMA EDUCACIONAL</p>
-        </footer>
-    </body>
+    <footer>
+      <p class="container">EXERCÍCIO DE SISTEMA EDUCACIONAL</p>
+    </footer>
+  </body>
 
-    <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/main.js"></script>
 </html>
