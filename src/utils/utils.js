@@ -23,6 +23,10 @@ export function limparFormulario() {
   document.getElementById("idade").value = "";
   document.getElementById("frequencia").value = "";
   document.getElementById("notas").value = "";
+
+  ['nome', 'idade', 'frequencia', 'notas'].forEach(id => {
+    document.getElementById(`${id}Erro`).textContent = "";
+  });
 }
 
 export function exibirMensagem(local) {
@@ -34,12 +38,20 @@ export function exibirMensagem(local) {
   mensagemErro.innerHTML = `&Otimes; O campo não foi preenchido corretamente.`;
   
 
+  erro.textContent = `O campo ${campo} não foi preenchido corretamente.`;
   return false;
 }
 
-// Para ocultar ou não o cadastro
 export function mostrarCadastro() {
   const cadastro = document.querySelector('form');
-    
   cadastro.classList.toggle('ocultar');
+}
+
+// mantenha somente essa, pois estava danod erro com função duplicada
+export function limparTabela(){
+  if(confirm("Deseja excluir os registros de todos os alunos?")){
+    const tabela = document.querySelector("#TabelaAluno tbody");
+    tabela.innerHTML = "";
+    exibirMensagem("Os registros foram exluidos");
+  };
 }
