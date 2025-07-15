@@ -12,7 +12,7 @@ export function CadastroAluno() {
 
   let erro = false;
 
-  if (!nomeComposto || nome === '') {
+  if (!nomeComposto || nome === '' || alunoJaCadastrado(nome) === true) {
     exibirMensagem("nome");
     erro = true;
   }
@@ -32,9 +32,14 @@ export function CadastroAluno() {
     erro = true;
   }
 
+
   const mensagemErro = document.getElementById('Erro');
 
-  if (erro) {return} else {mensagemErro.innerHTML = ''};
+  if (erro) {
+    return;
+  } else {
+    mensagemErro.innerHTML = '';
+  }
 
   const media = calcularMedia(notas);
   let status = "";
