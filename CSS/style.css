@@ -16,8 +16,23 @@
     --texto2: #3868A6;
     --texto3: #F28729;
     --texto4: #0D0D0D;
+    --bg: #ffffff;
 }
 
+.tema-escuro {
+    --texto: #1E1E1E;
+    --texto1: #BBBBBB;
+    --texto2: #5FA8D3;
+    --texto3: #FFD166;
+    --texto4: #ffffff;
+    --bg: #585858;
+    --input: #383737;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--texto4);
+}
 header, footer {
     text-align: center;
     font-size: 1.2em;
@@ -72,6 +87,8 @@ input{
     padding: 5px;
     /* margin-left: 5px; */
     font-size: 1em;
+    background-color: var(--input);
+    color: var(--texto4);
 }
 
 .campo {
@@ -128,4 +145,14 @@ footer{
 span {
     text-align: center;
     color: #FF0000;
+}
+
+.botoes-topo {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes-topo button {
+    margin: 0;
+    width: auto;
 }

@@ -55,3 +55,8 @@ export function limparTabela(){
     exibirMensagem("Os registros foram exluidos");
   };
 }
+
+export function alternarTema(botao) {
+    document.body.classList.toggle('tema-escuro');
+    botao.textContent = document.body.classList.contains('tema-escuro') ? ' Tema Claro' : ' Tema Escuro';
+}
