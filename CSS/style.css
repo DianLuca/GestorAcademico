@@ -11,19 +11,19 @@
 
 /* O nome das variáveis será corrigida */
 :root {
-    --texto: #C5D0D9;
-    --texto1: #4F6273;
-    --texto2: #3868A6;
-    --texto3: #F28729;
-    --texto4: #0D0D0D;
+    --background: #C5D0D9;
+    --backgroundOdd: #4F6273;
+    --cabecalho: #3868A6;
+    --erro: #FF0000;
+    --color: #0D0D0D;
 }
 
 header, footer {
     text-align: center;
     font-size: 1.2em;
     padding: 15px;
-    background-color: var(--texto);
-    color: var(--texto4);
+    background-color: var(--background);
+    color: var(--color);
 }
 
 section {
@@ -60,7 +60,7 @@ form {
     gap: 20px;
     padding: 10px;
     font-size: 1.2em;
-    border: 1px solid var(--texto4);
+    border: 1px solid var(--color);
     border-radius: 2px;
 }
 
@@ -82,24 +82,24 @@ input{
 /* Estilo da tabela */
 
 table {
-    border: 1px solid #0D0D0D;
+    border: 1px solid var(--color);
     border-collapse: collapse;
     text-align: center;
 }
 
 th {   
-    background-color: #3868A6;
-    border: 1px solid #0D0D0D;
+    background-color: var(--cabecalho);
+    border: 1px solid var(--color);
     padding: 5px;
 }
 
 td {
-    border: 1px solid #0D0D0D;
+    border: 1px solid var(--color);
     padding: 5px;
 }
 
 tr {
-    background-color: #C5D0D9;
+    background-color: var(--background);
 }
 
 tr:nth-child(even) {
@@ -126,6 +126,9 @@ footer{
 }
 
 span {
+    align-content: center;
+    font-size: 1em;
+    margin-left: 2px;
     text-align: center;
-    color: #FF0000;
+    color: var(--erro);
 }
