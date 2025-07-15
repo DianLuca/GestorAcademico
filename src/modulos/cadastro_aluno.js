@@ -8,31 +8,31 @@ export function CadastroAluno() {
   const notasInput = document.getElementById("notas").value;
   const notas = notasInput.split(",").map(nota => parseFloat(nota.trim()));
 
-  const nomeComposto = nome.split(" ").filter(p => p).length >= 2;
+  const nomeComposto = nome.split(" ").filter(palavra => palavra).length >= 2;
 
-  // if (!nomeComposto || !idade || isNaN(frequencia) || notas.length !== 4 || notas.some(isNaN)) {
-  //   exibirMensagem("Preencha todos os campos corretamente:\n- Nome composto\n- Idade\n- 4 notas numéricas\n- Frequência numérica");
-  //   return;
-  // }
-  if (!nomeComposto || nome === ''){
+  let erro = false;
+
+  if (!nomeComposto || nome === '') {
     exibirMensagem("nome");
+    erro = true;
   }
 
-  if (!idade) {
+  if (!idade || isNaN(parseInt(idade))) {
     exibirMensagem("idade");
+    erro = true;
   }
 
   if (isNaN(frequencia)) {
-    exibirMensagem('frequencia');
+    exibirMensagem("frequencia");
+    erro = true;
   }
 
-  if ((notas.length !==4) || notas.some(isNaN)){
-    exibirMensagem('notas')
+  if (notas.length !== 4 || notas.some(isNaN)) {
+    exibirMensagem("notas");
+    erro = true;
   }
 
-  if (exibirMensagem() === false){
-    return
-  }
+  if (erro) return;
 
   const media = calcularMedia(notas);
   let status = "";
