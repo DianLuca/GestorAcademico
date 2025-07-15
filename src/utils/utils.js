@@ -29,7 +29,7 @@ export function limparFormulario() {
   });
 }
 
-export function exibirMensagem(local) {
+export function exibirMensagem(local, mensagem) {
   
   const erro = document.getElementById(`${local}Erro`);
   const mensagemErro = document.getElementById('Erro');
@@ -38,7 +38,7 @@ export function exibirMensagem(local) {
   erro.style.borderColor = '#FF0000';
   span.textContent = '';
   erro.innerHTML = '&Otimes;';
-  mensagemErro.innerHTML = `&Otimes; O campo não foi preenchido corretamente.`;
+  mensagemErro.innerHTML = `&Otimes; ${mensagem}`;
   
   return false;
 }
