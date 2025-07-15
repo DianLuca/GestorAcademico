@@ -13,22 +13,22 @@ export function CadastroAluno() {
   let erro = false;
 
   if (!nomeComposto || nome === '' || alunoJaCadastrado(nome) === true) {
-    exibirMensagem("nome");
+    exibirMensagem("nome", "Por favor, insira um nome completo válido e que não esteja já cadastrado.");
     erro = true;
   }
 
   if (!idade || isNaN(parseInt(idade))) {
-    exibirMensagem("idade");
+    exibirMensagem("idade", "A idade precisa ser maior que zero.");
     erro = true;
   }
 
   if (isNaN(frequencia)) {
-    exibirMensagem("frequencia");
+    exibirMensagem("frequencia", "A frequência deve estar entre 0% e 100%.");
     erro = true;
   }
 
   if (notas.length !== 4 || notas.some(isNaN)) {
-    exibirMensagem("notas");
+    exibirMensagem("notas", "As notas devem ser números separados por vírgulas, ex: 8,7,10.");
     erro = true;
   }
 
