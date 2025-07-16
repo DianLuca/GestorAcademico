@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: large;
 }
 
 .container {
@@ -20,19 +21,17 @@
 }
 
 .tema-escuro {
-    --texto: #1E1E1E;
-    --texto1: #BBBBBB;
-    --texto2: #5FA8D3;
-    --texto3: #FFD166;
-    --texto4: #ffffff;
-    --bg: #585858;
+    --background: #3868A6;
+    --texto: #ffffff;
     --input: #383737;
+    --erro: #fdd700;
+    --bg: #585858;
 }
 
 body {
     min-height: 100vh;
     background-color: var(--bg);
-    color: var(--texto4);
+    color: var(--texto);
 }
 
 header, footer {
@@ -50,7 +49,7 @@ section {
     gap: 5px;
 }
 
-h2 {
+h2,h1 {
     text-transform: uppercase;
     font-size: 2em;
     text-align: center;
@@ -144,7 +143,7 @@ span {
     text-align: center;
     font-size: 1em;
     margin-left: 2px;
-    color: #FF0000;
+    color: var(--erro);
 }
 
 .botoes-topo {
