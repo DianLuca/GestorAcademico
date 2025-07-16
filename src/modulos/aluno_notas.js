@@ -1,6 +1,7 @@
 export function calcularMedia(notas) {
   const soma = notas.reduce((soma, valor) => soma + valor, 0);
   return soma / notas.length;
+  // Verificando erro
 }
 
 export function alunoJaCadastrado(nome) {
