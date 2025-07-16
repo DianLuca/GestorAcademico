@@ -32,7 +32,6 @@ export function CadastroAluno() {
     erro = true;
   }
 
-
   const mensagemErro = document.getElementById('Erro');
 
   if (erro) {
