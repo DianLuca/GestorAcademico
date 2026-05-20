@@ -1,7 +1,7 @@
 
 <br>
 
-# Gestor academico
+# Gestor Acadêmico
 
 <br>
 
